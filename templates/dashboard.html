@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-left">Login System</div>
+
+    <div class="nav-right">
+        <span style="float:right; margin-right:20px; margin-top:8px;">
+        ⏱️ <span id="timer">60</span>s
+    </span>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/change_password">Change Password</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="flash">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<!-- Dashboard Content -->
+<div class="container">
+    <h2>Welcome, {{ user }} </h2>
+    <p style="text-align:center; margin-top:10px;">
+        You are successfully logged in.
+    </p>
+</div>
+
+<script>
+let timeLeft = 60;
+
+setInterval(function() {
+    timeLeft--;
+    document.getElementById("timer").innerText = timeLeft;
+
+    if (timeLeft <= 0) {
+        alert("Session expired!");
+        window.location.href = "/login";
+    }
+}, 1000);
+</script>
+
+{% endblock %}

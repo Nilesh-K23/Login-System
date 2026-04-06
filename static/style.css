@@ -1,0 +1,165 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* Container (centered card) */
+.container {
+    /* width: 350px;
+    margin: 80px auto;   centers horizontally */
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 350px;
+    margin: 50px auto;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Fix input alignment issue */
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Button hover */
+button:hover {
+    background: #0056b3;
+}
+
+/* Links */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Link hover */
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Flash messages */
+.flash p {
+    text-align: center;
+    color: red;
+    margin-top: 10px;
+}
+
+/* Navbar */
+.navbar {
+    flex-wrap: wrap; 
+    background: #747272;
+    color: white;
+    padding: 10px 20px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Right side links */
+.nav-right {
+    display: flex;        /* makes items horizontal */
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;            /* spacing between items */
+   
+}
+
+/* Links */
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+/* Flash messages */
+.flash {
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    width: 350px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Success */
+.flash.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Error */
+.flash.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Warning */
+.flash.warning {
+    background: #fff3cd;
+    color: #856404;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-right {
+        margin-top: 10px;
+    }
+
+    .container {
+        margin: 30px auto;
+    }
+}
